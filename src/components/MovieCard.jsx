@@ -4,7 +4,6 @@ import notFound from '../assets/404.png'
 
 
 const MovieCard = ({ movie }) => {
-  console.log(movie)
     const container = {
         hidden: { opacity: 1, y: 100},
         visible: {

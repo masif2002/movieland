@@ -13,7 +13,6 @@ function App() {
   }, [])
   
   const fetchMovies = async (movieName) => {
-    console.log(movieName)
     const apiUrl = `https://www.omdbapi.com/?apikey=1a652ba6&s=${movieName}`
     
     const response = await fetch(apiUrl)

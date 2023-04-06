@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import React from 'react'
+import notFound from '../assets/404.png'
+
 
 const MovieCard = ({ movie }) => {
+  console.log(movie)
     const container = {
         hidden: { opacity: 1, y: 100},
         visible: {
@@ -23,7 +26,7 @@ const MovieCard = ({ movie }) => {
     
     >
     <div className='flex flex-col overflow-none border border 1-px border-[#FFFFFF] w-[300px] h-[550px] overflow-hidden rounded-xl hover:cursor-pointer hover:scale-110 duration-200'>
-        <img src={movie.Poster} alt="" width='400px' className='rounded-xl'/>
+        <img src={movie.Poster !== 'N/A' ? movie.Poster : notFound} alt={movie.Type} width='400px' className='rounded-xl'/>
         <div className='flex justify-between items-center p-5'>
             <h3 className='text-lg font-bold'>{movie.Title}</h3>
             <p>{movie.Year}</p>
